@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arithmetic operation </title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div id="container">
+      <div>
+        <input type="button" class="btn" value="Addition" onclick="add()" />
+        <input type="button" class="btn" value="Subtraction" onclick="sub()" />
+        <input type="button" class="btn" value="Multiplication" onclick="mul()" />
+        <input type="button" class="btn" value="Division" onclick="div()" />
+        <input type="button" class="btn" value="Reminder" onclick="rem()" />
+      </div>
+      <br /><br />
+      <div class="input">
+        <label for="">Number1</label>
+        <input
+          type="text"
+          id="a"
+          placeholder="Enter First Number"
+        /><br /><br />
+        <label for="">Number2</label>
+        <input type="text" id="b" placeholder="Enter Second Number" /><br />
+      </div>
+      <br /><br />
+      <div class="operation">
+        <label for="">Operation performed</label><br />
+        <input type="text" id="operationperformed" placeholder="Operation performed" style="border: 0" readonly/>
+        <br />
+        <label for="">Your Total</label><br />
+        <input type="text" id="total" placeholder="Your Total" readonly /><br />
+      </div>
+    </div>
+
+    <script>
+      function add() {
+        var a = document.getElementById("a").value;
+        var b = document.getElementById("b").value;
+        var c = Number(a) + Number(b);
+        document.getElementById("total").value = c;
+        document.getElementById("operationperformed").value = "Addition";
+      }
+      function sub() {
+        var a = document.getElementById("a").value;
+        var b = document.getElementById("b").value;
+        var c = Number(a) - Number(b);
+        document.getElementById("total").value = c;
+        document.getElementById("operationperformed").value = "Subtraction";
+      }
+      function mul() {
+        var a = document.getElementById("a").value;
+        var b = document.getElementById("b").value;
+        var c = Number(a) * Number(b);
+        document.getElementById("total").value = c;
+        document.getElementById("operationperformed").value = "Multiplication";
+      }
+      function div() {
+        var a = document.getElementById("a").value;
+        var b = document.getElementById("b").value;
+        var c = Number(a) / Number(b);
+        document.getElementById("total").value = c;
+        document.getElementById("operationperformed").value = "Division";
+      }
+      function rem() {
+        var a = document.getElementById("a").value;
+        var b = document.getElementById("b").value;
+        var c = Number(a) % Number(b);
+        document.getElementById("total").value = c;
+        document.getElementById("operationperformed").value = "Remainder ";
+      }
+    </script>
+  </body>
+</html>
